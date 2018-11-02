@@ -1,0 +1,268 @@
+bookmarks = {
+	bookmark = {
+		name = "KR_SCENARIO_NAME"
+		desc = "KR_SCENARIO_DESC"
+		date = 1985.1.1.1
+		picture = "GFX_select_date_1936"
+		default_country = "GER"
+		default = yes
+
+		"GER" = {
+			history = "GER_KR_GATHERING_STORM_DESC"
+			ideology = authoritarian_democrat
+			ideas = {
+				GER_victors_of_wwi
+				GER_quenched_militarism
+				ZO_idea
+			}
+
+			focuses = {
+				GER_black_monday_aftermath
+				GER_easter_promises
+				GER_tirpitzprogramm
+			}
+		}
+
+#		"AUS" = {
+#			history = "AUS_KR_GATHERING_STORM_DESC"
+#			ideology = authoritarian_democrat
+#			ideas = {
+#				AUS_financial_ties_broken
+#				AUS_k_u_k_armee_bonus
+#				AUS_vienna_circle
+#			}
+#
+#			focuses = {
+#				AUS_status_quo
+#				AUS_embrace_pluralism
+#				AUS_military_occupation
+#			}
+#		}
+
+		"FRA" = {
+			history = "FRA_KR_GATHERING_STORM_DESC"
+			ideology = syndicalist
+			ideas = {
+				FRA_communard_spirit
+				FRA_bad_intel
+			}
+
+			focuses = {
+				FRA_Host_the_Internationale
+				FRA_Demand_Alsace_Lorraine
+				FRA_World_revolution
+			}
+		}
+
+		"ENG" = {
+			history = "ENG_KR_GATHERING_STORM_DESC"
+			ideology = syndicalist
+			ideas = {
+				ENG_militia_idea
+			}
+
+			focuses = {
+				ENG_devolution
+				ENG_evolution
+				ENG_revolution
+			}
+		}
+
+		"CAN" = {
+			history = "CAN_KR_GATHERING_STORM_DESC"
+			ideology = market_liberal
+			ideas = {
+				CAN_divided_nation
+				anglo_french_tensions
+			}
+
+			focuses = {
+				CAN_kingly_prerogative
+				CAN_constitution_act
+				CAN_united_kingdom
+			}
+		}
+
+		"RUS" = {
+			history = "RUS_KR_GATHERING_STORM_DESC"
+			ideology = social_liberal
+			ideas = {
+				soviet_worker_soldier
+				rus_divided_staff
+				rus_divided_marine
+			}
+
+			focuses = {
+				RUS_TSAR_KYR
+				RUS_DEM_REP
+				RUS_expansionism
+
+			}
+		}
+		"USA" = {
+			history = "USA_KR_GATHERING_STORM_DESC"
+			ideology = market_liberal
+			ideas = {
+				USA_great_depression
+				USA_political_crisis
+			}
+			focuses = {
+				USA_american_ceaser
+				USA_american_cincinnatus
+				USA_form_pax_americana
+
+			}
+		}
+
+		"JAP" = {
+			history = "JAP_KR_GATHERING_STORM_DESC"
+			ideology = social_conservative
+			ideas = {
+				JAP_bad_start
+				JAP_no_army_focus
+				JAP_narrow_rail
+			}
+
+			focuses = {
+				JAP_democratic_path
+				JAP_chuou
+				JAP_ishinha
+			}
+		}
+
+		"---" = {
+			history = "OTHER_KR_GATHERING_STORM_DESC"
+		}
+
+		"ARG" = {
+			minor = yes
+			history = "ARG_KR_GATHERING_STORM_DESC"
+			ideology = national_populist
+			ideas = {
+				ARG_interservice_rivalry_navy_dominant
+				ARG_Military_Cliques
+				ARG_Military_Apparatus
+			}
+			focuses = {
+				ARG_A_Catholic_Federation
+				ARG_Expand_Naval_Facilities
+				ARG_Rule_Britannia_Britannia_Rules_the_Waves
+			}
+		}
+
+		"BRA" = {
+			minor = yes
+			history = "BRA_KR_GATHERING_STORM_DESC"
+			ideology = social_conservative
+			ideas = {
+				BRA_decentralization
+				BRA_wake_of_civil_war
+				BRA_state_armies
+			}
+			focuses = {
+				BRA_industry_defend_the_republic
+				BRA_new_state
+				BRA_the_empire_strikes_back
+			}
+		}
+
+		"CHL" = {
+			minor = yes
+			history = "CHL_KR_GATHERING_STORM_DESC"
+			ideology = syndicalist
+			ideas = {
+			}
+			focuses = {
+				CHL_the_third_chairman
+				CHL_counter_revolution
+				CHL_drilled_military
+			}
+		}
+
+		"PAR" = {
+			minor = yes
+			history = "PAR_KR_GATHERING_STORM_DESC"
+			ideology = authoritarian_democrat
+			ideas = {
+				PAR_pensions
+				PAR_prussia
+			}
+			focuses = {
+				PAR_estigarribato
+				PAR_defensores_del_chaco
+				PAR_no_better_way
+
+			}
+		}
+
+		"PRU" = {
+			minor = yes
+			history = "PRU_KR_GATHERING_STORM_DESC"
+			ideology = authoritarian_democrat
+			ideas = {
+				PRU_guardia_monotera
+				PRU_caudillo_rip
+			}
+			focuses = {
+				PRU_dying_the_inca_red
+				PRU_hispanidad_imperial
+				PRU_schachtian_economics_for_peru
+			}
+		}
+
+		"VEN" = {
+			minor = yes
+			history = "VEN_KR_GATHERING_STORM_DESC"
+			ideology = social_democrat
+			ideas = {
+				VEN_army_dominance
+				VEN_oil_addiction
+				VEN_foreign_oil_companies
+			}
+			focuses = {
+				VEN_revolution_by_ballot
+				VEN_democracy_prevails
+				VEN_preventive_coup
+			}
+		}
+
+		"DEI" = {
+			minor = yes
+			history = "DEI_KR_GATHERING_STORM_DESC"
+			ideology = authoritarian_democrat
+			ideas = {
+				DEI_idea_colonial_nation
+				DEI_idea_insulindian_unity_low
+				DEI_idea_insulindian_strength_very_low
+			}
+			focuses = {
+				DEI_congress_of_batavia
+				INS_merdeka
+				HOLEX_exiles_arrive
+			}
+		}
+
+		"GRE" = {
+			minor = yes
+			history = "GRE_KR_GATHERING_STORM_DESC"
+			ideology = social_liberal
+			ideas = {
+				GRE_foreign_industry_GER1
+				GRE_memories_of_king
+				GRE_legacy_of_alexander_idea
+			}
+			focuses = {
+				GRE_monarchy_referendum
+				GRE_fight_for_north
+				GRE_megali_idea
+			}
+		}
+
+
+
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}
