@@ -1,0 +1,456 @@
+# this is a check to see if a major has at least 35 factories
+# which means it's not just a faction leader (which anyone can be)
+is_actual_major = {
+	AND = {
+		is_major = yes
+		OR = {
+			num_of_factories > 49
+			tag = GER
+			tag = GEX
+			tag = AUS
+			tag = FRA
+			tag = ENG
+			tag = CAN
+			tag = GBR
+			tag = NFA
+			tag = RUS
+			tag = SOV
+			tag = JAP
+			tag = USA
+			tag = CSA
+			tag = TEX
+			tag = CAL
+		}
+	}
+}
+
+# checks whether the country in scope has the same government as ROOT (the country running the event/focus)
+has_same_government_as_ROOT = {
+	OR = {
+		AND = {
+			has_government = totalist
+			ROOT = { has_government = totalist }
+		}
+		AND = {
+			has_government = syndicalist
+			ROOT = { has_government = syndicalist }
+		}
+		AND = {
+			has_government = radical_socialist
+			ROOT = { has_government = radical_socialist }
+		}
+		AND = {
+			has_government = social_democrat
+			ROOT = { has_government = social_democrat }
+		}
+		AND = {
+			has_government = social_liberal
+			ROOT = { has_government = social_liberal }
+		}
+		AND = {
+			has_government = market_liberal
+			ROOT = { has_government = market_liberal }
+		}
+		AND = {
+			has_government = social_conservative
+			ROOT = { has_government = social_conservative }
+		}
+		AND = {
+			has_government = authoritarian_democrat
+			ROOT = { has_government = authoritarian_democrat }
+		}
+		AND = {
+			has_government = paternal_autocrat
+			ROOT = { has_government = paternal_autocrat }
+		}
+		AND = {
+			has_government = national_populist
+			ROOT = { has_government = national_populist }
+		}
+	}
+}
+
+# checks for these three government types for the country in scope
+has_socialist_government = {
+	custom_trigger_tooltip = {
+		tooltip = KR_is_socialist
+		OR = {
+			has_government = totalist
+			has_government = syndicalist
+			has_government = radical_socialist
+		}
+	}
+}
+
+not_has_socialist_government = {
+	custom_trigger_tooltip = {
+		tooltip = KR_is_not_socialist
+		NOT = {
+			has_government = totalist
+			has_government = syndicalist
+			has_government = radical_socialist
+		}
+	}
+}
+
+# checks for these four government types for the country in scope
+has_elected_government = {
+	custom_trigger_tooltip = {
+		tooltip = KR_is_elected
+		OR = {
+			has_government = social_democrat
+			has_government = social_liberal
+			has_government = market_liberal
+			has_government = social_conservative
+		}
+	}
+}
+
+not_has_elected_government = {
+	custom_trigger_tooltip = {
+		tooltip = KR_is_not_elected
+		NOT = {
+			has_government = social_democrat
+			has_government = social_liberal
+			has_government = market_liberal
+			has_government = social_conservative
+		}
+	}
+}
+
+# checks for these five government types for the country in scope
+has_democratic_government = {
+	custom_trigger_tooltip = {
+		tooltip = KR_is_democratic
+		OR = {
+			has_government = social_democrat
+			has_government = social_liberal
+			has_government = market_liberal
+			has_government = social_conservative
+			has_government = authoritarian_democrat
+		}
+	}
+}
+
+not_has_democratic_government = {
+	custom_trigger_tooltip = {
+		tooltip = KR_is_not_democratic
+		NOT = {
+			has_government = social_democrat
+			has_government = social_liberal
+			has_government = market_liberal
+			has_government = social_conservative
+			has_government = authoritarian_democrat
+		}
+	}
+}
+
+# checks for these two government types for the country in scope
+has_authoritarian_government = {
+	custom_trigger_tooltip = {
+		tooltip = KR_is_authoritarian
+		OR = {
+			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			has_government = national_populist
+		}
+	}
+}
+
+not_has_authoritarian_government = {
+	custom_trigger_tooltip = {
+		tooltip = KR_is_not_authoritarian
+		NOT = {
+			has_government = authoritarian_democrat
+			has_government = paternal_autocrat
+			has_government = national_populist
+		}
+	}
+}
+
+# checks for these two government types for the country in scope
+has_dictatorship_government = {
+	custom_trigger_tooltip = {
+		tooltip = KR_is_dictatorship
+		OR = {
+			has_government = paternal_autocrat
+			has_government = national_populist
+		}
+	}
+}
+
+not_has_dictatorship_government = {
+	custom_trigger_tooltip = {
+		tooltip = KR_is_not_dictatorship
+		NOT = {
+			has_government = paternal_autocrat
+			has_government = national_populist
+		}
+	}
+}
+
+# checks whether the country in scope has the same government type as ROOT (the country running the event/focus)
+# note that it's not the exact same government - just the general type, as above
+same_government_type_as_ROOT = {
+	OR = {
+		AND = {
+			has_socialist_government = yes
+			ROOT = { has_socialist_government = yes }
+		}
+		AND = {
+			has_democratic_government = yes
+			ROOT = { has_democratic_government = yes }
+		}
+		AND = {
+			has_dictatorship_government = yes
+			ROOT = { has_dictatorship_government = yes }
+		}
+	}
+}
+
+# the following triggers will check if the country in scope is on a particular continent
+# note that these are continents as per the game - asia and middle-east are considered separate continents
+is_in_asia = {
+	capital_scope = {
+		is_on_continent = asia
+	}
+}
+
+is_in_europe = {
+	capital_scope = {
+		is_on_continent = europe
+	}
+}
+
+is_in_africa = {
+	capital_scope = {
+		is_on_continent = africa
+	}
+}
+
+is_in_north_america = {
+	capital_scope = {
+		is_on_continent = north_america
+	}
+}
+
+is_in_south_america = {
+	capital_scope = {
+		is_on_continent = south_america
+	}
+}
+
+is_in_middle_east = {
+	capital_scope = {
+		is_on_continent = middle_east
+	}
+}
+
+is_in_australia = {
+	capital_scope = {
+		is_on_continent = australia
+	}
+}
+
+# checks whether the country in scope is in the same continent as ROOT (the country running the event)
+same_continent_as_ROOT = {
+	OR = {
+		AND = {
+			is_in_asia = yes
+			ROOT = { is_in_asia = yes }
+		}
+		AND = {
+			is_in_europe = yes
+			ROOT = { is_in_europe = yes }
+		}
+		AND = {
+			is_in_africa = yes
+			ROOT = { is_in_africa = yes }
+		}
+		AND = {
+			is_in_north_america = yes
+			ROOT = { is_in_north_america = yes }
+		}
+		AND = {
+			is_in_south_america = yes
+			ROOT = { is_in_south_america = yes }
+		}
+		AND = {
+			is_in_middle_east = yes
+			ROOT = { is_in_middle_east = yes }
+		}
+		AND = {
+			is_in_australia = yes
+			ROOT = { is_in_australia = yes }
+		}
+	}
+}
+
+# checks whether the state in scope is on the same continent as ROOT (the country running the event)
+state_same_continent_as_ROOT = {
+	OR = {
+		AND = {
+			is_on_continent = asia
+			ROOT = { is_in_asia = yes }
+		}
+		AND = {
+			is_on_continent = europe
+			ROOT = { is_in_europe = yes }
+		}
+		AND = {
+			is_on_continent = africa
+			ROOT = { is_in_africa = yes }
+		}
+		AND = {
+			is_on_continent = north_america
+			ROOT = { is_in_north_america = yes }
+		}
+		AND = {
+			is_on_continent = south_america
+			ROOT = { is_in_south_america = yes }
+		}
+		AND = {
+			is_on_continent = middle_east
+			ROOT = { is_in_middle_east = yes }
+		}
+		AND = {
+			is_on_continent = australia
+			ROOT = { is_in_australia = yes }
+		}
+	}
+}
+
+### world news triggers
+wants_world_news = {
+	OR = {
+		has_global_flag = NEWS_ALL
+		has_global_flag = NEWS_SOME
+	}
+}
+
+regional_europe_news = {
+	OR = {
+		has_global_flag = NEWS_ALL
+		is_in_europe = yes
+		any_neighbor_country = { is_in_europe = yes }
+	}
+}
+
+regional_asia_news = {
+	OR = {
+		has_global_flag = NEWS_ALL
+		is_in_asia = yes
+		any_neighbor_country = { is_in_asia = yes }
+		is_in_australia = yes
+	}
+}
+
+regional_africa_news = {
+	OR = {
+		has_global_flag = NEWS_ALL
+		is_in_africa = yes
+		any_neighbor_country = { is_in_africa = yes }
+	}
+}
+
+regional_north_america_news = {
+	OR = {
+		has_global_flag = NEWS_ALL
+		is_in_north_america = yes
+		any_neighbor_country = { is_in_north_america = yes }
+	}
+}
+
+regional_south_america_news = {
+	OR = {
+		has_global_flag = NEWS_ALL
+		is_in_south_america = yes
+		any_neighbor_country = { is_in_south_america = yes }
+	}
+}
+
+regional_middle_east_news = {
+	OR = {
+		has_global_flag = NEWS_ALL
+		is_in_middle_east = yes
+		any_neighbor_country = { is_in_middle_east = yes }
+	}
+}
+
+# Can be used in any country scope (to ensure the country has no owned state which it doesn't control)
+controls_all_owned_states = {
+	custom_trigger_tooltip = {
+		tooltip = controls_all_states
+		NOT = {
+			any_owned_state = {
+				NOT = { is_controlled_by = PREV }
+			}
+		}
+	}
+}
+
+# Can be used in state scope, to check if the owner is ROOT or a subject of ROOT
+is_owned_by_ROOT_or_subject = {
+	owner = {
+		OR = {
+			tag = ROOT
+			is_subject_of = ROOT
+		}
+	}
+}
+
+# Can be used in state scope, to check if the owner is ROOT or an ally/subject of ROOT
+is_owned_by_ROOT_or_ally = {
+	owner = {
+		OR = {
+			tag = ROOT
+			is_subject_of = ROOT
+			is_in_faction_with = ROOT
+		}
+	}
+}
+
+# Can be used in state scope, to check if the controller (not owner) is ROOT or a subject of ROOT
+is_controlled_by_ROOT_or_subject = {
+	controller = {
+		OR = {
+			tag = ROOT
+			is_subject_of = ROOT
+		}
+	}
+}
+
+# Can be used in state scope, to check if the controller (not owner) is ROOT or ally/subject of ROOT
+is_controlled_by_ROOT_or_ally = {
+	controller = {
+		OR = {
+			tag = ROOT
+			is_subject_of = ROOT
+			is_in_faction_with = ROOT
+		}
+	}
+}
+
+# Can be used in state scope, to check if the owner and controller is ROOT or a subject of ROOT
+is_owned_and_controlled_by_ROOT_or_subject = {
+	owner = {
+		controls_state = PREV
+		OR = {
+			tag = ROOT
+			is_subject_of = ROOT
+		}
+	}
+}
+
+# Can be used in state scope, to check if the owner and controller is ROOT or a subject of ROOT
+is_owned_and_controlled_by_ROOT_or_ally = {
+	owner = {
+		controls_state = PREV
+		OR = {
+			tag = ROOT
+			is_subject_of = ROOT
+			is_in_faction_with = ROOT
+		}
+	}
+}
+
