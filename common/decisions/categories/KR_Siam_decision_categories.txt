@@ -1,0 +1,27 @@
+SIA_Siamese-Burmese_War_category = {
+
+	allowed = {
+		OR = {
+			original_tag = SIA
+			original_tag = BUR
+		}
+	}
+
+	visible = {
+		OR = {
+			original_tag = SIA
+			original_tag = BUR
+		}
+	}
+}
+
+SIA_infrastructure_category = {
+
+	allowed = {
+		original_tag = SIA
+	}
+
+	visible = {
+		original_tag = SIA
+	}
+}
